@@ -1,0 +1,16 @@
+{
+    "datasets": "./data/small.csv",
+    "datasets_col": 2,
+    "tgt_len": 80,
+    "d_embed": 256,
+    "d_ff": 512,
+    "learning_rate": 0.01,
+    "d_k": 32,
+    "d_v": 32,
+    "n_layers": 5,
+    "n_heads": 8,
+    "temperature": 3,
+    "batch_size": 128,
+    "epochs": 10,
+    "save_addr": "./checkpoint/transformer_try"
+}

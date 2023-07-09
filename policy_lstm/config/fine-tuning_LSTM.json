@@ -1,0 +1,23 @@
+{
+    "fine_tuning_datasets": "./data/small.csv",
+    "fine_tuning_datasets_col": 1,
+    "truth_seq_datasets": "./data/small.txt",
+    "prime_str": "i",
+    "generator_model": "/home/yangchongzhou/TPG/policy_lstm/checkpoint/lstm/seq_generator_epoch13.0.pt",
+    "embed_size_generator": 500,
+    "hidden_size_generator": 1024,
+    "layers_generator": 10,
+    "learning_rate_generator": 1e-6,
+    "pre_learning_rate_generator": 1e-8,
+    "embed_size_discriminator": 100,
+    "hidden_size_discriminator": 300,
+    "dropout_discriminator": 0.2,
+    "learning_rate_discriminator": 0.00001,
+    "num_epochs": 5,
+    "g_epoch": 15,
+    "d_epoch": 15,
+    "fake_data_num": 200,
+    "predictor_score_up": 1.2,
+    "predictor_score_down": 0.6,
+    "save_addr": "./checkpoint/lstm_try"
+}

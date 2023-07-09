@@ -1,0 +1,10 @@
+{
+    "datasets": "./data/scaffolds_omega_rmsdgood_HHH.csv",
+    "datasets_col": 2,
+    "embed_size_generator": 500,
+    "hidden_size_generator": 1024,
+    "layers_generator": 10,
+    "learning_rate_generator": 1e-6,
+    "epoch_pretrain": 10,
+    "save_addr": "./result/model_lstm10_tag_HHH123"
+}

@@ -1,0 +1,15 @@
+{
+    "prime_str": "i",
+    "dataset": "./data/HHH_scaffolds.csv",
+    "dataset_col": 1,
+    "model": "/home/yangchongzhou/TPG/policy_lstm/checkpoint/lstm/seq_generator_epoch13.0.pt",
+    "embed_size_generator": 500,
+    "hidden_size_generator": 1024,
+    "layers_generator": 10,
+    "learning_rate_generator": 1e-6,
+    "temperature": 2,
+    "num_seq": 10,
+    "min_length": 50,
+    "max_length": 50,
+    "seq_save": "./out.fasta"
+}
