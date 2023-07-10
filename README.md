@@ -86,7 +86,7 @@ name|content
 fine_tuning_datasets|Address of the dataset used for pretraining`.csv`
 datasets_col|The column where the protein sequence is located (starting from 0)
 truth_seq_datasets|Address of the dataset used for pretraining`.txt`
-prime_str|topology labels specified for generated sequnece
+prime_str|Topology labels specified for generated sequnece
 generator_model|Address of pretrained model
 num_epochs|Total epoch of fine-tuning
 g_epoch|Epoch of Generative model training in each round of fine-tuning
