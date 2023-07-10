@@ -1,10 +1,10 @@
 # TopoProGenerator
-Generating protein sequences with specifying topological structures 
+Generating protein sequences with specified topological structures 
 FIG
 
 ## Requirements
 ### 1. Install Pytorch(If the GPU is already usable, skip this step)
-####1.1 Obtain CUDA version<br>
+####1.1 know your CUDA version<br>
 ```
 nvidia-smi
 ```
@@ -110,6 +110,11 @@ num_seq|Number of generated sequences
 min_length|Minimum length of generated sequence
 max_length|Maximum length of generated sequence which should be smaller than `tge_len`
 seq_save|Address for generating sequence file
+
+Generate sequences
+```
+python generate_transformer.py --config ./config/generate_transformer.fig
+```
 
 
 
