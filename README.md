@@ -109,7 +109,7 @@ python fine-tuning_transformer.py --config ./config/fine-tuning_transformer.json
 After each epoch of fine-tuning, the model will generate 20000 sequences simultaneously.
 
 ## Generate sequences
-Edit `/config/fine-tuning_transformer.json` (model parameters need to be consistent with the pretraining or fine-tuning)
+Edit `/config/generate_transformer.json` (model parameters need to be consistent with the pretraining or fine-tuning)
 name|content
 ---- | -----
 prime_str|topology labels specified for generated sequnece
