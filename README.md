@@ -10,7 +10,7 @@ cd TopoProGenerator
 ```
 
 ## Install Requirements
-### 1. Install Pytorch(If GPU is usable, skip this step)
+### 1. Install Pytorch(if GPU is usable, skip this step)
 #### 1.1 know your CUDA version<br>
 ```
 nvidia-smi
@@ -30,7 +30,7 @@ pip install -r requirements
 ```
 
 ## Download model parameter
-### 1. protbert
+### 1. Protbert
 Download protbert parameterfile [protbert.tar.gz] on (https://zenodo.org/record/8129221)<br>
 Then
 ```
@@ -41,7 +41,7 @@ Place the address of the fold`protbert` in these two places in file `src.predict
 self.tokenizer = BertTokenizer.from_pretrained('****/protbert', do_lower_case=False)
 self.model = BertModel.from_pretrained('****/protbert')
 ```
-### 2. model trained
+### 2. Model trained
 If you want to train a model yourself from scratch, please skip this step.<br>
 Choose the model you want to use.(Transformer or LSTM)
 ```
@@ -57,7 +57,7 @@ Modify `"generator_model"` in `config/generate_transformer.json` and locate your
 
 ## Train your own model(Taking Transformer as an example)
 If you want to use a trained model, skip this step.<br>
-### 1. prepare dataset
+### 1. Prepare dataset
 You need to process the sequence data set into the form like (i means 'HHH')
 ```
 iDEEERRVEELIEEARELEKRNPEEARKVLEEAYELAKRINDPLLEEVEKLLRRLR
@@ -71,7 +71,7 @@ SEHEERIRELLERARRIPDKEEARRLVEEAIRIAEENNDEELLKKAREILEEIKR
 ```
 save it as `*.txt` and `*.csv`, which are the dataset for finetuning.<br>
 For TPG, both the pretraining dataset and fine-tuning dataset are in `./data`.
-### 2. pretrain
+### 2. Pretrain
 !!!model parameters need to be consistent during pretraining, fine-tuning and generate.(such as `tgt_len`, `d_embed`, `n_layers` and so on).<br>
 Edit `/config/pretrain_transformer.json` 
 name|content
@@ -85,7 +85,7 @@ Start pretraining
 python pretrain_transformer.py --config ./config/pretrain_transformer.json
 ```
 
-### 3. finetune
+### 3. Fine-tune
 Edit `/config/fine-tuning_transformer.json` (model parameters need to be consistent with the pretraining)
 name|content
 ---- | -----
@@ -108,7 +108,7 @@ python fine-tuning_transformer.py --config ./config/fine-tuning_transformer.json
 ```
 After each epoch of fine-tuning, the model will generate 20000 sequences simultaneously.
 
-## generate sequences
+## Generate sequences
 Edit `/config/fine-tuning_transformer.json` (model parameters need to be consistent with the pretraining or fine-tuning)
 name|content
 ---- | -----
