@@ -8,3 +8,4 @@ FIG
 ```
 nvidia-smi
 ```
+According to the CUDA version, install a compatible version of Pytorch on the [Pytorch website]（https://pytorch.org/）
