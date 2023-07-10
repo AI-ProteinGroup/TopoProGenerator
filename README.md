@@ -10,7 +10,7 @@ cd TopoProGenerator
 ```
 
 ## Install Requirements
-### 1. Install Pytorch(If the GPU is usable, skip this step)
+### 1. Install Pytorch(If GPU is usable, skip this step)
 #### 1.1 know your CUDA version<br>
 ```
 nvidia-smi
