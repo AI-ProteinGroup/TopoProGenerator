@@ -62,7 +62,8 @@ And process the ori sequence sets like
 DEEERRVEELIEEARELEKRNPEEARKVLEEAYELAKRINDPLLEEVEKLLRRLR
 SEHEERIRELLERARRIPDKEEARRLVEEAIRIAEENNDEELLKKAREILEEIKR
 ```
-save it as `*.txt` and `*.csv`, which are the dataset for finetuning.
+save it as `*.txt` and `*.csv`, which are the dataset for finetuning.<br>
+For TPG, both the pretraining dataset and fine-tuning dataset are in `./data`.
 ### 2. pretrain
 !!!model parameters need to be consistent during pretraining, fine-tuning and generate.(such as `tgt_len`, `d_embed`, `n_layers` and so on).<br>
 Edit `/config/pretrain_transformer.json` 
@@ -113,7 +114,7 @@ seq_save|Address for generating sequence file
 
 Generate sequences
 ```
-python generate_transformer.py --config ./config/generate_transformer.fig
+python generate_transformer.py --config ./config/generate_transformer.json
 ```
 
 
