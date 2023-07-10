@@ -5,7 +5,7 @@ Generating protein sequences with specified topological structures.
 
 ## Download project
 ```
-git clone git@github.com:AI-ProteinGroup/TopoProGenerator.git
+git clone https://github.com/AI-ProteinGroup/TopoProGenerator.git
 cd TopoProGenerator
 ```
 
