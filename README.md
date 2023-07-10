@@ -24,14 +24,14 @@ pip install -r requirements
 
 ## Download model parameter
 ### 1. protbert
-Download protbert parameterfile [protbert.tar.gz] on (https://zenodo.org/record/8129221)
+Download protbert parameterfile [protbert.tar.gz] on (https://zenodo.org/record/8129221)<br>
 Then
 ```
 tar -xzvf protbert.tar.gz
 ```
 Place the address of the fold`protbert` in these two places in file `src.predict_model.py`:
 ```
-self.tokenizer = BertTokenizer.from_pretrained('****/protbert', do_lower_case=False )
+self.tokenizer = BertTokenizer.from_pretrained('****/protbert', do_lower_case=False)
 self.model = BertModel.from_pretrained('****/protbert')
 ```
 ### 2. model trained
@@ -50,10 +50,28 @@ Modify `"generator_model"` in `config/generate_transformer.json` and locate your
 
 ## Train your own model
 If you want to use a trained model, skip this step.<br>
+### 1. prepare dataset
+You need to process the sequence data set into the form like
+```
+iDEEERRVEELIEEARELEKRNPEEARKVLEEAYELAKRINDPLLEEVEKLLRRLR
+iSEHEERIRELLERARRIPDKEEARRLVEEAIRIAEENNDEELLKKAREILEEIKR
+```
+Minuscule+sequence, and save it in csv format
+### 2. pretrain
+
 Edit `/config/generate_transformer.json` 
 name|content
 ---- | -----
-xxx|222
+datasets|Address of the dataset used for pre training
+datasets_col|The column where the protein sequence is located (starting from 0)
+tgt_len|Maximum length of generated sequence
+save_addr|Address of output model file
+
+Start training
+```
+python pretrain_transformer.py --config ./config/pretrain_transformer.json
+```
+
 
 
 
