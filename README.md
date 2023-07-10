@@ -15,6 +15,23 @@ python
 import torch
 torch.cuda.is_available()
 ```
-if return `True`, pytorch is already installed.
+If return `True`, pytorch is already installed.
 
+### Install other requirements
+```
+pip install -r requirements
+```
+
+## model parameter
+### 1. protbert
+Down protbert parameterfile [protbert.tar.gz] on (https://zenodo.org/record/8129221)
+Then
+```
+tar -xzvf protbert.tar.gz
+```
+Place the address of the fold`protbert` in these two places in file `src.predict_model.py`:
+```
+self.tokenizer = BertTokenizer.from_pretrained(_'../transformer/protbert'_, do_lower_case=False )
+self.model = BertModel.from_pretrained(_'../transformer/protbert'_)
+```
 
