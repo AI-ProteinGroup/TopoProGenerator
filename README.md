@@ -22,16 +22,40 @@ If return `True`, pytorch is already installed.
 pip install -r requirements
 ```
 
-## model parameter
+## Download model parameter
 ### 1. protbert
-Down protbert parameterfile [protbert.tar.gz] on (https://zenodo.org/record/8129221)
+Download protbert parameterfile [protbert.tar.gz] on (https://zenodo.org/record/8129221)
 Then
 ```
 tar -xzvf protbert.tar.gz
 ```
 Place the address of the fold`protbert` in these two places in file `src.predict_model.py`:
 ```
-self.tokenizer = BertTokenizer.from_pretrained(__'../transformer/protbert'__, do_lower_case=False )
-self.model = BertModel.from_pretrained('**../transformer/protbert**')
+self.tokenizer = BertTokenizer.from_pretrained('****/protbert', do_lower_case=False )
+self.model = BertModel.from_pretrained('****/protbert')
 ```
+### 2. model trained
+If you want to train a model yourself from scratch, please skip this step.<br>
+Choose the model you want to use.(Transformer or LSTM)
+```
+cd policy_transformer
+```
+or
+```
+cd policy_LSTM
+```
+Download the model file you need on (https://zenodo.org/record/8129221).<br>
+We have provided model parameter files for TopoProGenerator[model_transformer.pth] and LSTM[model_LSTM.pt] as a reference model.<br>
+Modify `"generator_model"` in `config/generate_transformer.json` and locate your model parameter file.
+
+## Train your own model
+If you want to use a trained model, skip this step.<br>
+Edit `/config/generate_transformer.json` 
+name|content
+---- | -----
+xxx|222
+
+
+
+
 
