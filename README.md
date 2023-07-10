@@ -9,7 +9,7 @@ FIG
 nvidia-smi
 ```
 According to the CUDA version, install a compatible version of Pytorch on the [Pytorch website]（https://pytorch.org/）
-#### 2. Check if pytorch installation was successful
+#### 1.2 Check if pytorch installation was successful
 ```
 python
 import torch
