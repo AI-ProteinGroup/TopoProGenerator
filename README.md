@@ -6,6 +6,7 @@ Generating protein sequences with specified topological structures.
 ## Download project
 ```
 git clone git@github.com:AI-ProteinGroup/TopoProGenerator.git
+cd TopoProGenerator
 ```
 
 ## Install Requirements
