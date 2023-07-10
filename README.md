@@ -3,7 +3,7 @@ Generating protein sequences with specified topological structures.
 ![frame](https://github.com/AI-ProteinGroup/TopoProGenerator/blob/main/frame1.png)
 
 
-## download project
+## Download project
 ```
 git clone git@github.com:AI-ProteinGroup/TopoProGenerator.git
 ```
