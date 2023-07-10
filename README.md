@@ -26,7 +26,7 @@ If return `True`, pytorch is already installed.
 
 ### 2. Install other requirements
 ```
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 ## Download model parameter
