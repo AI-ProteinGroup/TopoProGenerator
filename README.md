@@ -1,6 +1,6 @@
 # TopoProGenerator
 Generating protein sequences with specified topological structures.
-![fig](https://github.com/AI-ProteinGroup/TopoProGenerator/blob/main/frame.png)
+![frame](https://github.com/AI-ProteinGroup/TopoProGenerator/blob/main/frame.pdf)
 
 
 ## Requirements
