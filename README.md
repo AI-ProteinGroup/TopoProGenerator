@@ -31,7 +31,7 @@ tar -xzvf protbert.tar.gz
 ```
 Place the address of the fold`protbert` in these two places in file `src.predict_model.py`:
 ```
-self.tokenizer = BertTokenizer.from_pretrained(_'../transformer/protbert'_, do_lower_case=False )
-self.model = BertModel.from_pretrained(_'../transformer/protbert'_)
+self.tokenizer = BertTokenizer.from_pretrained(__'../transformer/protbert'__, do_lower_case=False )
+self.model = BertModel.from_pretrained(__'../transformer/protbert'__)
 ```
 
