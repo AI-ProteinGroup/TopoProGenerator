@@ -36,7 +36,7 @@ Then
 ```
 tar -xzvf protbert.tar.gz
 ```
-Place the address of the fold`protbert` in these two places in file `src.predict_model.py`:
+Place the address of the fold`protbert` in the below two places in file `policy_transformer/src/predict_model.py` or `policy_LSTM/src/predict_model.py`:
 ```
 self.tokenizer = BertTokenizer.from_pretrained('****/protbert', do_lower_case=False)
 self.model = BertModel.from_pretrained('****/protbert')
