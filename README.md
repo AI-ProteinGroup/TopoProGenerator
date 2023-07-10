@@ -8,7 +8,7 @@ Generating protein sequences with specified topological structures.
 git clone git@github.com:AI-ProteinGroup/TopoProGenerator.git
 ```
 
-## Requirements
+## Install Requirements
 ### 1. Install Pytorch(If the GPU is usable, skip this step)
 #### 1.1 know your CUDA version<br>
 ```
