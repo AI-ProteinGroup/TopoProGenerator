@@ -62,25 +62,59 @@ And process the ori sequence sets like
 DEEERRVEELIEEARELEKRNPEEARKVLEEAYELAKRINDPLLEEVEKLLRRLR
 SEHEERIRELLERARRIPDKEEARRLVEEAIRIAEENNDEELLKKAREILEEIKR
 ```
-save it as `*.txt`, which is the dataset for finetuning.
+save it as `*.txt` and `*.csv`, which are the dataset for finetuning.
 ### 2. pretrain
+!!!model parameters need to be consistent during pretraining, fine-tuning and generate.(such as `tgt_len`, `d_embed`, `n_layers` and so on).<br>
 Edit `/config/pretrain_transformer.json` 
 name|content
 ---- | -----
 datasets|Address of the dataset used for pretraining
 datasets_col|The column where the protein sequence is located (starting from 0)
-tgt_len|Maximum length of generated sequence
 save_addr|Address of output model file
 
-Start training
+Start pretraining
 ```
 python pretrain_transformer.py --config ./config/pretrain_transformer.json
 ```
 
 ### 3. finetune
-Edit `/config/fine-tuning_transformer.json` 
+Edit `/config/fine-tuning_transformer.json` (model parameters need to be consistent with the pretraining)
 name|content
 ---- | -----
+fine_tuning_datasets|Address of the dataset used for pretraining`.csv`
+datasets_col|The column where the protein sequence is located (starting from 0)
+truth_seq_datasets|Address of the dataset used for pretraining`.txt`
+prime_str|topology labels specified for generated sequnece
+generator_model|Address of pretrained model
+num_epochs|Total epoch of fine-tuning
+g_epoch|Epoch of Generative model training in each round of fine-tuning
+d_epoch|Epoch of Discriminative model training in each round of fine-tuning
+fake_data_num|Number of generated sequences for Discriminative model training
+predictor_score_up|Weights of stable sequences
+predictor_score_up|Weights of unstable sequences
+save_addr|Address of output model file
+
+Start fine-tuning
+```
+python fine-tuning_transformer.py --config ./config/fine-tuning_transformer.json
+```
+After each epoch of fine-tuning, the model will generate 20000 sequences simultaneously.
+
+## generate sequences
+Edit `/config/fine-tuning_transformer.json` (model parameters need to be consistent with the pretraining or fine-tuning)
+name|content
+---- | -----
+prime_str|topology labels specified for generated sequnece
+generator_model|Address of model
+num_seq|Number of generated sequences
+min_length|Minimum length of generated sequence
+max_length|Maximum length of generated sequence which should be smaller than `tge_len`
+seq_save|Address for generating sequence file
+
+
+
+
+
 
 
 
