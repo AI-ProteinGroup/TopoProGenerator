@@ -4,7 +4,7 @@ FIG
 
 ## Requirements
 ### 1. Install Pytorch(If the GPU is already usable, skip this step)
-####1.1 know your CUDA version<br>
+#### 1.1 know your CUDA version<br>
 ```
 nvidia-smi
 ```
