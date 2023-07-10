@@ -53,7 +53,6 @@ cd policy_LSTM
 ```
 Download the model file you need on (https://zenodo.org/record/8129221).<br>
 We have provided model parameter files for TopoProGenerator[model_transformer.pth] and LSTM[model_LSTM.pt] as a reference model.<br>
-Modify `"generator_model"` in `config/generate_transformer.json` and locate your model parameter file.
 
 ## Train your own model(Taking Transformer as an example)
 If you want to use a trained model, skip this step.<br>
