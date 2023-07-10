@@ -3,7 +3,7 @@ Generating protein sequences with specified topological structures
 FIG
 
 ## Requirements
-### 1. Install Pytorch(If the GPU is already usable, skip this step)
+### 1. Install Pytorch(If the GPU is usable, skip this step)
 #### 1.1 know your CUDA version<br>
 ```
 nvidia-smi
@@ -17,7 +17,7 @@ torch.cuda.is_available()
 ```
 If return `True`, pytorch is already installed.
 
-### Install other requirements
+### 2. Install other requirements
 ```
 pip install -r requirements
 ```
