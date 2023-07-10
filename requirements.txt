@@ -9,5 +9,5 @@ tqdm==4.64.0
 transformers==3.4.0
 seaborn==0.12.2
 protobuf==3.20.1
-chardet-5.1.0
+chardet==5.1.0
 
