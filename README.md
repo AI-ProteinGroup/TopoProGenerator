@@ -1,6 +1,7 @@
 # TopoProGenerator
-Generating protein sequences with specified topological structures 
-FIG
+Generating protein sequences with specified topological structures.
+![fig](https://github.com/AI-ProteinGroup/TopoProGenerator/blob/main/frame.png)
+
 
 ## Requirements
 ### 1. Install Pytorch(If the GPU is usable, skip this step)
