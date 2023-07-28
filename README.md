@@ -28,6 +28,7 @@ If return `True`, pytorch is already installed.
 ```
 pip install -r requirements.txt
 ```
+Installation time is within 1 hour
 
 ## Download model parameter
 ### 1. Protbert
@@ -54,7 +55,7 @@ cd policy_LSTM
 Download the model file you need on (https://zenodo.org/record/8129221).<br>
 We have provided model parameter files for TopoProGenerator[model_transformer.pth] and LSTM[model_LSTM.pt] as a reference model.<br>
 
-## Train your own model(Taking Transformer as an example)
+## Train your own model(Taking transformer as an example)
 If you want to use a trained model, skip this step.<br>
 ### 1. Prepare dataset
 You need to process the sequence data set into the form like (i means 'HHH')
@@ -70,6 +71,7 @@ SEHEERIRELLERARRIPDKEEARRLVEEAIRIAEENNDEELLKKAREILEEIKR
 ```
 save it as `*.txt` and `*.csv`, which are the dataset for finetuning.<br>
 For TPG, both the pretraining dataset and fine-tuning dataset are in `./data`.
+
 ### 2. Pretrain
 !!!model parameters need to be consistent during pretraining, fine-tuning and generate.(such as `tgt_len`, `d_embed`, `n_layers` and so on).<br>
 Edit `/config/pretrain_transformer.json` 
@@ -83,6 +85,7 @@ Start pretraining
 ```
 python pretrain_transformer.py --config ./config/pretrain_transformer.json
 ```
+Using A100, the pretraining time for transformer is within 5 hours, and the pretraining time for LSTM is within 2 days.
 
 ### 3. Fine-tune
 Edit `/config/fine-tuning_transformer.json` (model parameters need to be consistent with the pretraining)
@@ -105,7 +108,9 @@ Start fine-tuning
 ```
 python fine-tuning_transformer.py --config ./config/fine-tuning_transformer.json
 ```
-After each epoch of fine-tuning, the model will generate 20000 sequences simultaneously.
+After each epoch of fine-tuning, the model will generate 20000 sequences simultaneously.<br>
+
+Using A100, the fine-tuning time for transformer is within 40 hours, and for LSTM is within 20 hours.
 
 ## Generate sequences
 Edit `/config/generate_transformer.json` (model parameters need to be consistent with the pretraining or fine-tuning)
@@ -122,6 +127,7 @@ Generate sequences
 ```
 python generate_transformer.py --config ./config/generate_transformer.json
 ```
+
 ## License
 This project is covered under the Apache 2.0 License.
 
