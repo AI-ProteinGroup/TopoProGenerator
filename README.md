@@ -122,8 +122,8 @@ Generate sequences
 ```
 python generate_transformer.py --config ./config/generate_transformer.json
 ```
-
-
+## sLicense
+This project is covered under the Apache 2.0 License.
 
 
 
