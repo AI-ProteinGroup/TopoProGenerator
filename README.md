@@ -69,7 +69,7 @@ And process the ori sequence sets like
 DEEERRVEELIEEARELEKRNPEEARKVLEEAYELAKRINDPLLEEVEKLLRRLR
 SEHEERIRELLERARRIPDKEEARRLVEEAIRIAEENNDEELLKKAREILEEIKR
 ```
-save it as `*.txt` and `*.csv`, which are the dataset for finetuning.<br>
+save it as `*.txt` and `*.csv`, which are the dataset for fine-tuning.<br>
 For TPG, both the pretraining dataset and fine-tuning dataset are in `./data`.
 
 ### 2. Pretrain
