@@ -110,7 +110,7 @@ python fine-tuning_transformer.py --config ./config/fine-tuning_transformer.json
 ```
 After each epoch of fine-tuning, the model will generate 20000 sequences simultaneously.<br>
 
-Using A100, the fine-tuning time for transformer is within 40 hours, and for LSTM is within 20 hours.
+Using A100, the fine-tuning time for transformer is within 40 hours, and for LSTM is within 20 hours, which can be faster if using distributed training.
 
 ## Generate sequences
 Edit `/config/generate_transformer.json` (model parameters need to be consistent with the pretraining or fine-tuning)
